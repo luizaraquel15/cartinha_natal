@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site Natalino</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Natalina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>🎄 Bem-vindo ao Site Natalino! 🎅</h1>
+        <h1>🎅 Loja Natalina</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#loja">Loja</a>
+            <a href="#cartinha">Cartinha</a>
+            <a href="#contato">Contato</a>
+            <a href="#carrinho">Carrinho 🛒</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#quem">Quem Somos</a>
-        <a href="#cartinha">Cartinha</a>
-        <a href="#contato">Contato</a>
-    </nav>
-
-    <section id="home">
-        <h2>Home</h2>
-        <p>Entre no clima natalino com a magia, alegria e esperança dessa época tão especial!</p>
+    <section id="home" class="secao">
+        <h2>Bem-vindo à Magia do Natal!</h2>
+        <p>Encontre roupas natalinas incríveis para presentear quem você ama.</p>
+        <img src="https://i.imgur.com/8pQGkZQ.png" alt="Imagem natalina" class="banner">
     </section>
 
-    <section id="quem">
+    <section id="quem-somos" class="secao">
         <h2>Quem Somos</h2>
-        <p>Somos um site criado especialmente para espalhar o espírito de Natal. Aqui você pode escrever sua cartinha para o Papai Noel, descobrir curiosidades natalinas e muito mais!</p>
+        <p>Somos uma loja especializada em produtos natalinos que trazem alegria, estilo e magia para o seu fim de ano.</p>
     </section>
 
-    <section id="cartinha">
-        <h2>Cartinha para o Papai Noel</h2>
-        <p>Escreva sua cartinha abaixo:</p>
-        <div class="cartinha-container">
-            <textarea placeholder="Querido Papai Noel..."></textarea>
+    <section id="loja" class="secao">
+        <h2>🎁 Produtos Natalinos</h2>
+
+        <div class="produtos-container">
+
+            <div class="produto">
+                <img src="img1.jpeg" alt="Blusa Natalina 1">
+                <h3>Suéter Natalino Vermelho</h3>
+                <p>R$ 89,90</p>
+                <button onclick="addCarrinho('Suéter Natalino Vermelho', 89.90)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="img2.webp" alt="Blusa Natalina 2">
+                <h3>Camiseta Papai Noel</h3>
+                <p>R$ 49,90</p>
+                <button onclick="addCarrinho('Camiseta Papai Noel', 49.90)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto">
+                <img src="https://i.imgur.com/f7JNmzV.jpeg" alt="Blusa Natalina 3">
+                <h3>Moletom Renas</h3>
+                <p>R$ 119,90</p>
+                <button onclick="addCarrinho('Moletom Renas', 119.90)">Adicionar ao Carrinho</button>
+            </div>
+
         </div>
     </section>
 
-    <section id="contato">
+    <section id="cartinha" class="secao">
+        <h2>📜 Cartinha para o Papai Noel</h2>
+        <textarea id="cartinha-texto" placeholder="Digite sua cartinha aqui..."></textarea>
+        <button onclick="enviarCartinha()">Enviar Cartinha</button>
+        <p id="retorno-cartinha"></p>
+    </section>
+
+    <section id="contato" class="secao">
         <h2>Contato</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome">
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com">
-            
-            <button type="submit">Enviar</button>
-        </form>
+        <p>Email: contato@natalmagico.com</p>
+        <p>Telefone: (11) 99999-9999</p>
+    </section>
+
+    <section id="carrinho" class="secao">
+        <h2>🛒 Seu Carrinho</h2>
+        <ul id="lista-carrinho"></ul>
+        <p id="total"></p>
     </section>
 
     <footer>
-        <p>© 2025 - Site Natalino. Todos os direitos reservados.</p>
+        <p>🎄 Loja Natalina © 2025 - Feito com espírito natalino.</p>
     </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
